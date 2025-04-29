@@ -10,7 +10,9 @@ namespace HomeLoanAPI.Data
         }
         // Define your DbSets (tables) here
         public DbSet<User> Users { get; set; }
-        
+        public DbSet<LoanApplication> LoanApplications { get; set; }
+
+
 
     }
 }
