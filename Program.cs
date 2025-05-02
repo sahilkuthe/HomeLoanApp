@@ -42,6 +42,8 @@ builder.Services.AddAuthentication(options =>
 
 // Register Repositories
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<ILoanRepository, LoanRepository>();
+
 
 var app = builder.Build();
 

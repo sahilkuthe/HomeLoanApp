@@ -4,6 +4,7 @@ using HomeLoanAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HomeLoanAPI.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
+    [Migration("20250502103642_addloanapp")]
+    partial class addloanapp
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,6 +38,7 @@ namespace HomeLoanAPI.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AgreementPath")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ApplicationNumber")
@@ -74,6 +78,7 @@ namespace HomeLoanAPI.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("LOAPath")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
@@ -90,6 +95,7 @@ namespace HomeLoanAPI.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NOCPath")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nationality")
@@ -104,6 +110,7 @@ namespace HomeLoanAPI.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PanCardPath")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PanNo")
@@ -126,6 +133,7 @@ namespace HomeLoanAPI.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("SalarySlipPath")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Status")
@@ -139,6 +147,7 @@ namespace HomeLoanAPI.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("VoterIdPath")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ApplicationId");
