@@ -10,6 +10,8 @@ namespace HomeLoanAPI.Models
         public string ApplicationNumber { get; set; }
         public DateTime AppointmentDate { get; set; }
         public string Status { get; set; } = "Sent for verification";
+        public string? Remarks { get; set; }
+
 
         // Income Details
         public string PropertyLocation { get; set; }
@@ -50,5 +52,8 @@ namespace HomeLoanAPI.Models
         // Foreign Key to User
         public int UserId { get; set; }
         public User User { get; set; }
+
+       
+
     }
 }

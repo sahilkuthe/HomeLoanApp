@@ -21,6 +21,7 @@ namespace HomeLoanAPI.Helpers
             {
                 new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
                 new Claim(ClaimTypes.Email, user.Email),
+                new Claim("UserId", user.UserId.ToString()),
                 new Claim(ClaimTypes.Role, user.Role)
             };
 

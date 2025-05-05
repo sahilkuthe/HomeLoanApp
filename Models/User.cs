@@ -33,6 +33,6 @@ namespace HomeLoanAPI.Models
         public string AadharNo { get; set; }
         public string PanNo { get; set; }
 
-        public string Role { get; set; } = "Customer";  // Default role
+        public string Role { get; set; } = "User";  // Default role
     }
 }
